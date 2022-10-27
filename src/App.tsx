@@ -4,9 +4,10 @@ import {Routes, Route} from 'react-router'
 // import MainPage from './Pages/MainPage';
 // import AboutPage from './Pages/AboutPage';
 import Links from './Links';
+import loadable from '@loadable/component'
 
-const MainPage = React.lazy(()=> import('./Pages/MainPage'))
-const AboutPage = React.lazy(()=> import('./Pages/AboutPage'))
+const MainPage = loadable(()=> import('./Pages/MainPage'))
+const AboutPage = loadable(()=> import('./Pages/AboutPage'))
 
 function App(){
   return (
